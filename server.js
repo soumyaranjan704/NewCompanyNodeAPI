@@ -40,6 +40,13 @@ app.get('/gfg-articles', cors(corsOptions),
     res.send("You have signed up successfully. Thank you!");
   });
 
+  app.post("/contact", cors(corsOptions), function (req, res) {
+
+    console.log(req.body);
+  
+    res.send("Recieved your Token. Thank you!");
+  });
+
 
 
 app.listen(port, () => {
