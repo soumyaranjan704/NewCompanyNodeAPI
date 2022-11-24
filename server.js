@@ -32,7 +32,49 @@ app.get('/gfg-articles', cors(corsOptions),
 
 //****************GET****************** */
 
+app.get('/newsletter', cors(corsOptions), function (req, res) {
+  res.json(
+    [{
+      "newsLetterParagraph": "Design is not just what it looks like and feels like. Design is how it works.",
+    }]
+
+
+  )
+
+});
+
+// app.get('/postJobData', cors(corsOptions), function (req, res) {
+//   res.json(
+//     [{
+//       "jobTitle": "Business Development Manager",
+//       "companyName": "Antronsys Technologies",
+//       "Experience": "0 Year| Fresher"
+
+//     },
+   
+//     {
+//       "jobTitle": "Asp .net Developer",
+//       "companyName": "Antronsys Technologies",
+//       "Experience": "1 Year"
+//     },
+//     {
+//       "jobTitle": "Angular Developer",
+//       "companyName": "Antronsys Technologies",
+//       "Experience": "2 Year"
+//     },
+//     {
+//       "jobTitle": "React Developer",
+//       "companyName": "Antronsys Technologies",
+//       "Experience": "2 Year"
+//     }
   
+//   ]
+
+//   )
+
+// });
+
+//POST
   app.post("/signup", cors(corsOptions), function (req, res) {
 
     console.log(req.body);
@@ -47,6 +89,12 @@ app.get('/gfg-articles', cors(corsOptions),
     res.send("Recieved your Token. Thank you!");
   });
 
+  // app.post("/apply", cors(corsOptions), function (req, res) {
+
+  //   console.log(req.body);
+  
+  //   res.send("CV  Uploaded Successfully!");
+  // });
 
 
 app.listen(port, () => {
